@@ -1,6 +1,6 @@
 ---
-layout: post
-title:  "Welcome to Jekyll!"
+layout: single
+title:  "Test"
 date:   2018-05-14 17:44:44 -0400
 categories: jekyll update
 ---

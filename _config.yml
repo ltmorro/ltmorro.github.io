@@ -13,22 +13,49 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@example.com
+title: Luke Morrow
+email: ltmorro@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://ltmorro.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  ltmorro
 
 # Build settings
 markdown: kramdown
 remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "dark"
 plugins:
   - jekyll-feed
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+include: ["_pages","_data"]
+
+author:
+  name   : "Luke Morrow"
+  avatar : "/assets/images/profile.png"
+  location : "Clemson, SC"
+  bio    : "Graduate student at Clemson University."
+  email  : "ltmorro@gmail.com "# optional
+  linkedin : "luke-morrow"
+  github : "ltmorro"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
