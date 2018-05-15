@@ -5,7 +5,7 @@ date:   2018-05-14 17:44:44 -0400
 categories:
   - projects
 ---
-Hi! Thanks for visiting! Welcome to my personal website!
+Hi! Thanks for visiting, welcome to my personal website!
 
 My goal for this website is to create the amalgamation of everything I find interesting. From fascinating [applications][projects] of computer science to incredible displays of [mother nature][adventures], I hope to show you my view of this amazing world.  
 
