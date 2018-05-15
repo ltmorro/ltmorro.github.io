@@ -29,6 +29,21 @@ remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "dark"
 plugins:
   - jekyll-feed
+  - jekyll-paginate
+  - jekyll-archives
+
+whitelist:
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-archives
+
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:path/
+  adventures:
+    output: true
+    permalink: /:collection/:path/
 
 defaults:
   # _posts
@@ -57,6 +72,8 @@ author:
   linkedin : "luke-morrow"
   github : "ltmorro"
 
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
