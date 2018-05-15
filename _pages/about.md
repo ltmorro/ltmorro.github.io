@@ -4,7 +4,7 @@ title: About Me
 permalink: /about/
 ---
 
-I'm currently fostering my love for computing at Clemson University. I am in pursuit of my Master of Science in Computer Science degree, after graduating
+I'm currently fostering my love for computing at Clemson University. I am in pursuit of my Master of Science in Computer Science degree.
 
 My area of focus is Informatics and Scientific Computation. I'm captivated by data science, machine learning, artificial intelligence, and cyber security. Interested in what I've done? Look [here!][projects]
 
