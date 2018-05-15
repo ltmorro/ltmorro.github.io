@@ -7,6 +7,9 @@ categories:
 ---
 Hi! Thanks for visiting! Welcome to my personal website!
 
-My goal for this website is to create the amalgamation of everything I find interesting. From fascinating applications of computer science to
+My goal for this website is to create the amalgamation of everything I find interesting. From fascinating [applications][projects] of computer science to incredible displays of [mother nature][adventures], I hope to show you my view of this amazing world.  
 
 From time to time, I hope to write some posts about little side projects I'm working on such as creating a raspberry pi garage door controller. I have no concrete plans, so this section will mostly be for fun.  
+
+[adventures]: /adventures
+[projects]: /projects
