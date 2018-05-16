@@ -6,7 +6,7 @@ categories:
   - projects
 excerpt: "Detecting and classifying objects as public and private to make better privacy setting recommendations on social media."
 header:
-  teaser: "/assets/images/cooccurrence.png"
+  teaser: "/assets/images/Cooccurrence.png"
 author_profile: true
 
 ---
