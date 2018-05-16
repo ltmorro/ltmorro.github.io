@@ -2,8 +2,6 @@
 layout: single
 title:  "Welcome to my Site!"
 date:   2018-05-14 17:44:44 -0400
-categories:
-  - projects
 ---
 Hi! Thanks for visiting, welcome to my personal website!
 

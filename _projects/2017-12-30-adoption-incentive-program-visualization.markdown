@@ -7,6 +7,7 @@ categories:
 excerpt: "A visual exploration of the effectiveness of the Adoption Incentive Program."
 header:
   teaser: /assets/images/adoption.png
+author_profile: true
 ---
 This page is still a work in progress.
 

@@ -38,10 +38,10 @@ whitelist:
 collections:
   projects:
     output: true
-    permalink: /:collection/:path/
+    permalink: /projects/:path/
   adventures:
     output: true
-    permalink: /:collection/:path/
+    permalink: /adventures/:path/
 
 defaults:
   # _posts
@@ -55,6 +55,20 @@ defaults:
   - scope:
       path: ""
       type: pages
+    values:
+      layout: single
+      author_profile: true
+  # _projects
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: single
+      author_profile: true
+  # _adventures
+  - scope:
+      path: ""
+      type: "adventures"
     values:
       layout: single
       author_profile: true

@@ -7,5 +7,6 @@ categories:
 excerpt: "From the 1994 Census Data, can we predict who makes over or under $50k?"
 header:
   teaser: "/assets/images/confusion.png"
+author_profile: true
 ---
 This page is still a work in progress.
