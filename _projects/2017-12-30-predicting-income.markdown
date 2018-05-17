@@ -129,12 +129,79 @@ $$
 \underbrace{||\,\beta\,||_{1}}_{Penalty}
 $$
 
-In this case, the _tuning parameter_ λ controls the effect of the penalty.
+In this case, the _tuning parameter_ $$\lambda$$ controls the effect of the penalty.
 In R, we can use the `glmnet` function to find the optimal value for lambda.
 ```R
 cv.out <- cv.glmnet(x,y,alpha=1,family="binomial", type.measure = "mse")
 ```
 This function outputs two values: `lambda.1se` and `lambda.min`. `lambda.min` is the best model with the lowest CV error. `lambda.1se` is the value of lambda that is a simpler model than `lambda.min`, but still maintains an error within 1 standard error of the best model. I chose to use `lambda.1se` versus `lambda.min` since it is a simpler model with an error that is comparable to the best model. The simpler model is preferable because it is less prone to overfitting.
+
+The resulting feature coefficients and odds ratio are listed below.
+
+| Feature | Coefficients | Odds Ratio |
+|:--------|:-------:|--------:|
+| (Intercept) | -8.115833261 | 0.000298771 |
+| **_age_** | **_0.022234722_** | **_1.022483756_** |
+| workclass Federal-gov | 0.42175318 | 1.524632169 |
+| workclass Private | 0.032164565 | 1.032687436 |
+| workclass Self-emp-inc | 0.194814933 | 1.215086093 |
+| workclass Self-emp-not-inc | -0.263976328 | 0.767991719 |
+| workclass State-gov | -0.013690425 | 0.986402862 |
+| education Assoc-acdm | -0.120690198 | 0.886308498 |
+| education Prof-school | 0.070479572 | 1.07302265 |
+| **_education.num_** | **_0.271707016_** | **_1.31220249_** |
+| **_marital.status Married-AF-spouse_** | **_1.476782832_** | **_4.378835544_** |
+| **_marital.status Married-civ-spouse_** | **_1.759282125_** | **_5.808266286_** |
+| marital.status Never-married | -0.322028381 | 0.724677623 |
+| **_occupation Exec-managerial_** | **_0.688178679_** | **_1.990087641_** |
+| occupation Farming-fishing | -0.778132972 | 0.459262668 |
+| occupation Handlers-cleaners | -0.379597994 | 0.684136381 |
+| occupation Machine-op-inspct | -0.14071935 | 0.868733088 |
+| occupation Other-service | -0.58675557 | 0.556128682 |
+| **_occupation Prof-specialty_** | **_0.409664395_** | **_1.506312174_** |
+| occupation Protective-serv | 0.279387174 | 1.322319212 |
+| occupation Sales | 0.170704398 | 1.186140072 |
+| **_occupation Tech-support_** | **_0.435470246_** | **_1.545689743_** |
+| relationship Other-relative | -0.182299291 | 0.833351889 |
+| relationship Own-child | -0.621429641 | 0.537175919 |
+| **_relationship Wife_** | **_0.878403791_** | **_2.407054476_** |
+| race White |0.102088171 | 1.107481115 |
+| **_sex Male_** | **_0.545103832_** | **_1.724787461_** |
+| capital.gain | 0.0002304 | 1.000230427 |
+| capital.loss | 0.000558734 | 1.00055889 |
+| hours.per.week | 0.026468125 | 1.026821517 |
+| native.country Cambodia | 0.205780038 | 1.228482954 |
+| native.country Columbia | -0.2567686 | 0.773547192 |
+| native.country Italy | 0.147862783 | 1.159353802 |
+| native.country Mexico | -0.031542921 | 0.968949368 |
+| native.country Philippines | 0.031896842 | 1.032410998 |
+| native.country South | -0.08434675 | 0.919112498 |
+| native.country United-States | 0.099264715 | 1.104358601 |
+
+
+### Model Performance
+I used the test partition of the data set as my validation set when performing cross-validation. I predicted the values of the target variable, income, using my new simpler model. Then to test for the model’s accuracy, I constructed a confusion matrix. The resulting confusion matrix is displayed below.
+
+
+$$
+\begin{array}{|c|c|c|c|}
+\hline
+& <= $50K & > $50K & Sum \\ \hline
+ <= $50K & 11669 & 766 & 12435 \\ \hline
+ > $50K & 1642 & 2204 & 3846 \\ \hline
+ Sum & 13311 & 2970 & 16281 \\ \hline
+\end{array}
+$$
+
+The accuracy of the model when tested against the validation set was 85.20975%.
+
+
+### Conclusion
+The largest indicator of a citizen making greater than $50K is having a marital status of ‘married’. The fitted model says that, holding all other variables constant, the odds that a citizen makes over $50K increases by a factor of 4.379 or 5.808 if the citizen is an armed forces married person or a civilian married person, respectively. This may be slightly misleading since households typically complete one census, so the reported income may be a combination of both the spouse’s income. A person is 2.407 times more likely to make over $50K if their relationship status is Wife. This also may be a result of the nature of completing a census as a household.
+
+Another strong indicator is years of education. Controlling for all other variables, for every one year increase in education, the inhabitant is 1.312 times more likely to make more than $50K. Occupations in which one needs higher education, such as executive/managerial, professional/specialty, and tech support positions, also have a positive effect on the odds of making greater than $50K.
+
+In 1994, the gender wage gap appears to have been quite large. The odds that a citizen makes more than $50K increases by a factor of 1.725 if that citizen is male.
 
 [uc_irvine]: https://archive.ics.uci.edu/ml/datasets/Adult
 [git]: https://github.com/ltmorro/CensusDataScience/blob/master/census.R
