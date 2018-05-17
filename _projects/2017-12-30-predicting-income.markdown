@@ -53,6 +53,7 @@ The distributions of >50K and ≤50K in the fnlwgt box plot are nearly identical
 ### Explore Discrete Variables
 To begin my exploratory data analysis on the discrete variables, I plotted the relative frequency bar graphs as opposed to the histograms for the continuous variables.
 ![discrete_hist](/assets/images/discrete_hist.svg)
+
 The native.country has a very tight distribution with 89.59% of the population having a native country of the United States. For this reason, I will not include native.country in my model. In addition, the education variable seems to perfectly correlate with the education.num year value - that is, a value of HS-grad in education correlates with 12 years in education.num. Thus since education.num is finer grained, I chose to only include education.num in my model.
 
 To further investigate the discrete variables, I created stacked bar graphs to include the relative frequencies of >50K and ≤50K.
