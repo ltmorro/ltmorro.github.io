@@ -23,6 +23,8 @@ capital-gain
 capital-loss
 hours-per-week
 ```
+#### Description of fnlwgt
+fnlwgt is the final sampling weight. This measure is included because a portion of the United States population is unable to complete a census including citizens in incarceration and active duty military members. The inclusion of final weight attempts to correct the systematic differences in selection probabilities.
 ### Discrete Variables:
 ```
 >50K or ≤50K
@@ -53,7 +55,6 @@ The distributions of >50K and ≤50K in the fnlwgt box plot are nearly identical
 ### Explore Discrete Variables
 To begin my exploratory data analysis on the discrete variables, I plotted the relative frequency bar graphs as opposed to the histograms for the continuous variables.
 ![discrete_hist](/assets/images/discrete_hist.svg)
-
 The native.country has a very tight distribution with 89.59% of the population having a native country of the United States. For this reason, I will not include native.country in my model. In addition, the education variable seems to perfectly correlate with the education.num year value - that is, a value of HS-grad in education correlates with 12 years in education.num. Thus since education.num is finer grained, I chose to only include education.num in my model.
 
 To further investigate the discrete variables, I created stacked bar graphs to include the relative frequencies of >50K and ≤50K.
@@ -181,8 +182,15 @@ The resulting feature coefficients and odds ratio are listed below.
 
 
 ### Model Performance
-I used the test partition of the data set as my validation set when performing cross-validation. I predicted the values of the target variable, income, using my new simpler model. Then to test for the model’s accuracy, I constructed a confusion matrix. The resulting confusion matrix is displayed below.
-
+I used the test partition of the data set as my validation set when performing cross-validation. I predicted the values of the target variable, income, using my new simpler model.
+Then to test for the model’s accuracy, I constructed a confusion matrix.
+```R
+lasso.probs <- predict(cv.out, newx=x_test,s=lambda1se, type="response")
+lasso.income <- rep(" <=50K.", length(test$income))
+lasso.income[lasso.probs >= .5] <- " >50K."
+confusion.matrix <- table(test$income, lasso.income)
+```
+The resulting confusion matrix is displayed below.
 
 $$
 \begin{array}{|c|c|c|c|}
@@ -194,7 +202,7 @@ $$
 \end{array}
 $$
 
-The accuracy of the model when tested against the validation set was 85.20975%.
+The accuracy of the model when tested against the validation set was 85.21%. On the other hand, the specificity (true negative rate) of the model was lacking at 57.31%. 
 
 
 ### Conclusion
