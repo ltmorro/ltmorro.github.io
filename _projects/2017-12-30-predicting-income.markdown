@@ -46,12 +46,12 @@ Before we jump right in to creating a classification model, let's first learn ab
 ### Explore Continuous Variables
 I began my exploratory data analysis by first examining the continuous variables. I created relative frequency histograms for each variable using the R libraries `ggplot2` and `gridExtra`.
 <figure class="half">
-    <a href="/assets/images/age.svg"><img src="/assets/images/age.svg"></a>
-    <a href="/assets/images/fnlwgt.svg"><img src="/assets/images/fnlwgt.svg"></a>
-    <a href="/assets/images/education_num.svg"><img src="/assets/images/education_num.svg"></a>
-    <a href="/assets/images/capital_gain.svg"><img src="/assets/images/capital_gain.svg"></a>
-    <a href="/assets/images/capital_loss.svg"><img src="/assets/images/capital_loss.svg"></a>
-    <a href="/assets/images/hours.svg"><img src="/assets/images/hours.svg"></a>
+    <a href="/assets/images/age.png"><img src="/assets/images/age.svg"></a>
+    <a href="/assets/images/fnlwgt.png"><img src="/assets/images/fnlwgt.svg"></a>
+    <a href="/assets/images/education_num.png"><img src="/assets/images/education_num.svg"></a>
+    <a href="/assets/images/capital_gain.png"><img src="/assets/images/capital_gain.svg"></a>
+    <a href="/assets/images/capital_loss.png"><img src="/assets/images/capital_loss.svg"></a>
+    <a href="/assets/images/hours.png"><img src="/assets/images/hours.svg"></a>
     <figcaption>The frequency histograms for continuous variables</figcaption>
 </figure>
 The relative frequency histograms of capital gain and capital loss lead to valuable insight. Since both of the variables are very tightly distributed at 0, I will not include them in my initial model.
