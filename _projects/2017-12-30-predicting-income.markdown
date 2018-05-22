@@ -45,7 +45,15 @@ There is a possibility of unknown values in the data set and they are represente
 Before we jump right in to creating a classification model, let's first learn about our data.
 ### Explore Continuous Variables
 I began my exploratory data analysis by first examining the continuous variables. I created relative frequency histograms for each variable using the R libraries `ggplot2` and `gridExtra`.
-![cont_hist](/assets/images/cont_hist.svg)
+<figure class="half">
+    <a href="/assets/images/age.svg"><img src="/assets/images/age.svg"></a>
+    <a href="/assets/images/fnlwgt.svg"><img src="/assets/images/fnlwgt.svg"></a>
+    <a href="/assets/images/education_num.svg"><img src="/assets/images/education_num.svg"></a>
+    <a href="/assets/images/capital_gain.svg"><img src="/assets/images/capital_gain.svg"></a>
+    <a href="/assets/images/capital_loss.svg"><img src="/assets/images/capital_loss.svg"></a>
+    <a href="/assets/images/hours.svg"><img src="/assets/images/hours.svg"></a>
+    <figcaption>The frequency histograms for continuous variables</figcaption>
+</figure>
 The relative frequency histograms of capital gain and capital loss lead to valuable insight. Since both of the variables are very tightly distributed at 0, I will not include them in my initial model.
 
 To further explore the continuous variables, I created box plots of the remaining variables to compare the above 50K and below 50K distributions.
@@ -202,7 +210,7 @@ $$
 \end{array}
 $$
 
-The accuracy of the model when tested against the validation set was 85.21%. On the other hand, the specificity (true negative rate) of the model was lacking at 57.31%. 
+The accuracy of the model when tested against the validation set was 85.21%. On the other hand, the specificity (true negative rate) of the model was lacking at 57.31%.
 
 
 ### Conclusion
