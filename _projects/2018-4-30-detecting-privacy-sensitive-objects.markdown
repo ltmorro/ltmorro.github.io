@@ -12,4 +12,6 @@ author_profile: true
 ---
 This page is still a work in progress.
 
-![co_occurrence](/assets/images/cooccurrence_big.png)
+<figure>
+<a href="/assets/images/privacy/cooccurrence_big.png"><img src="/assets/images/privacy/cooccurrence_big.png"></a>
+</figure>

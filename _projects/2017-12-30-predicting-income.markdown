@@ -6,7 +6,7 @@ categories:
   - projects
 excerpt: "From the 1994 Census Data, can we predict who makes over or under $50k?"
 header:
-  teaser: "/assets/images/confusion.png"
+  teaser: "/assets/images/census/marital_rel.png"
 author_profile: true
 ---
 The goal of this data science project is to predict if an individual makes greater than or less than $50K based on certain attributes using R. The data set is sourced from the 1994 United States census and is provided by the [UC Irvine Machine Learning Repository][uc_irvine]. I fit my model using a logistic regression to better understand the effect of various variables on the likelihood that an individual earns more or less than fifty thousand dollars. You can find my source code on [Github][git].
@@ -94,7 +94,7 @@ To further investigate the discrete variables, I created stacked bar graphs to i
 The variables all seem to have varying distributions, so I will include all of these in my model. It also is apparent from these plots that the distribution of >50K is much larger in male citizens
 
 ## Model Selection
-Since the goal is the classification of a dichotomous variable, I will use a logistic regression model. The features that I included in my model are age, education.num, hours.per.week, workclass, marital.status, occupation, relationship, race, and sex.
+Since the goal is the classification of a dichotomous variable, I will use a logistic regression model. The features that I included in my model are `age`, `education.num`, `hours.per.week`, `workclass`, `marital.status`, `occupation`, `relationship`, `race`, and `sex`.
 ### Training
 Using the `glm` function in R, I trained my model on the training partition of the dataset.
 ```R
