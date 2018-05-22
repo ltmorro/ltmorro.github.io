@@ -5,7 +5,7 @@ permalink: /about/
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/lake.jpg
+  overlay_image: /assets/images/headers/lake.jpg
   caption: "Photo credit: [**@Skeeze**](https://pixabay.com/en/users/skeeze-272447/)"
 excerpt: "Learn a little about me."
 ---

@@ -46,27 +46,51 @@ Before we jump right in to creating a classification model, let's first learn ab
 ### Explore Continuous Variables
 I began my exploratory data analysis by first examining the continuous variables. I created relative frequency histograms for each variable using the R libraries `ggplot2` and `gridExtra`.
 <figure class="half">
-    <a href="/assets/images/age.png"><img src="/assets/images/age.svg"></a>
-    <a href="/assets/images/fnlwgt.png"><img src="/assets/images/fnlwgt.svg"></a>
-    <a href="/assets/images/education_num.png"><img src="/assets/images/education_num.svg"></a>
-    <a href="/assets/images/capital_gain.png"><img src="/assets/images/capital_gain.svg"></a>
-    <a href="/assets/images/capital_loss.png"><img src="/assets/images/capital_loss.svg"></a>
-    <a href="/assets/images/hours.png"><img src="/assets/images/hours.svg"></a>
+    <a href="/assets/images/census/age.png"><img src="/assets/images/census/age.png"></a>
+    <a href="/assets/images/census/fnlwgt.png"><img src="/assets/images/census/fnlwgt.png"></a>
+    <a href="/assets/images/census/education_num.png"><img src="/assets/images/census/education_num.png"></a>
+    <a href="/assets/images/census/cap_gain.png"><img src="/assets/images/census/cap_gain.png"></a>
+    <a href="/assets/images/census/cap_loss.png"><img src="/assets/images/census/cap_loss.png"></a>
+    <a href="/assets/images/census/hours.png"><img src="/assets/images/census/hours.png"></a>
     <figcaption>The frequency histograms for continuous variables</figcaption>
 </figure>
 The relative frequency histograms of capital gain and capital loss lead to valuable insight. Since both of the variables are very tightly distributed at 0, I will not include them in my initial model.
 
 To further explore the continuous variables, I created box plots of the remaining variables to compare the above 50K and below 50K distributions.
-![cont_box](/assets/images/cont_box.svg)
+<figure class="half">
+    <a href="/assets/images/census/age_rel.png"><img src="/assets/images/census/age_rel.png"></a>
+    <a href="/assets/images/census/fnlwgt_rel.png"><img src="/assets/images/census/fnlwgt_rel.png"></a>
+    <a href="/assets/images/census/education_num_rel.png"><img src="/assets/images/census/education_num_rel.png"></a>
+    <a href="/assets/images/census/hours_rel.png"><img src="/assets/images/census/hours_rel.png"></a>
+    <figcaption>The box plots for continuous variables</figcaption>
+</figure>
 The distributions of >50K and ≤50K in the fnlwgt box plot are nearly identical. For this reason, I will not include fnlwgt in my initial model. The >50K distribution seems to correlate to higher education levels.
 
 ### Explore Discrete Variables
 To begin my exploratory data analysis on the discrete variables, I plotted the relative frequency bar graphs as opposed to the histograms for the continuous variables.
-![discrete_hist](/assets/images/discrete_hist.svg)
+<figure class="half">
+    <a href="/assets/images/census/work.png"><img src="/assets/images/census/work.png"></a>
+    <a href="/assets/images/census/education.png"><img src="/assets/images/census/education.png"></a>
+    <a href="/assets/images/census/marital.png"><img src="/assets/images/census/marital.png"></a>
+    <a href="/assets/images/census/occupation.png"><img src="/assets/images/census/occupation.png"></a>
+    <a href="/assets/images/census/relationship.png"><img src="/assets/images/census/relationship.png"></a>
+    <a href="/assets/images/census/race.png"><img src="/assets/images/census/race.png"></a>
+    <a href="/assets/images/census/sex.png"><img src="/assets/images/census/sex.png"></a>
+    <a href="/assets/images/census/native.png"><img src="/assets/images/census/native.png"></a>
+    <figcaption>The relative frequency bar graphs of discrete variables.</figcaption>
+</figure>
 The native.country has a very tight distribution with 89.59% of the population having a native country of the United States. For this reason, I will not include native.country in my model. In addition, the education variable seems to perfectly correlate with the education.num year value - that is, a value of HS-grad in education correlates with 12 years in education.num. Thus since education.num is finer grained, I chose to only include education.num in my model.
 
 To further investigate the discrete variables, I created stacked bar graphs to include the relative frequencies of >50K and ≤50K.
-![discrete_relative](/assets/images/discrete_relative.svg)
+<figure class="half">
+    <a href="/assets/images/census/work_rel.png"><img src="/assets/images/census/work_rel.png"></a>
+    <a href="/assets/images/census/marital_rel.png"><img src="/assets/images/census/marital_rel.png"></a>
+    <a href="/assets/images/census/occupation_rel.png"><img src="/assets/images/census/occupation_rel.png"></a>
+    <a href="/assets/images/census/relationship_rel.png"><img src="/assets/images/census/relationship_rel.png"></a>
+    <a href="/assets/images/census/race_rel.png"><img src="/assets/images/census/race_rel.png"></a>
+    <a href="/assets/images/census/sex_rel.png"><img src="/assets/images/census/sex_rel.png"></a>
+    <figcaption>The relative frequency bar graphs of discrete variables.</figcaption>
+</figure>
 The variables all seem to have varying distributions, so I will include all of these in my model. It also is apparent from these plots that the distribution of >50K is much larger in male citizens
 
 ## Model Selection
