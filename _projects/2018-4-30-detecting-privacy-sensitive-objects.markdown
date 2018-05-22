@@ -13,5 +13,8 @@ author_profile: true
 This page is still a work in progress.
 
 <figure>
-<a href="/assets/images/privacy/cooccurrence_big.png"><img src="/assets/images/privacy/cooccurrence_big.png"></a>
+<a href="/assets/images/privacy/cooccurrence.png"><img src="/assets/images/privacy/cooccurrence.png"></a>
+</figure>
+<figure>
+<a href="/assets/images/privacy/privacy.png"><img src="/assets/images/privacy/privacy.png"></a>
 </figure>

@@ -6,7 +6,7 @@ categories:
   - projects
 excerpt: "From the 1994 Census Data, can we predict who makes over or under $50k?"
 header:
-  teaser: "/assets/images/census/marital_rel.png"
+  teaser: "/assets/images/census/teaser.png"
 author_profile: true
 ---
 The goal of this data science project is to predict if an individual makes greater than or less than $50K based on certain attributes using R. The data set is sourced from the 1994 United States census and is provided by the [UC Irvine Machine Learning Repository][uc_irvine]. I fit my model using a logistic regression to better understand the effect of various variables on the likelihood that an individual earns more or less than fifty thousand dollars. You can find my source code on [Github][git].
