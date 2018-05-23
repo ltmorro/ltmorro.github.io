@@ -35,7 +35,14 @@ We had 5 days to mountain bike and we weren't going to waste any of it. We hit 5
 </figure>
 ### Porcupine Rim
 The Whole Enchilada is a world famous mountain biking trail that takes riders down from the alpine peak to the beautiful redrock desert, encompassing 31 miles of trail and 8,000 feet of descent. Unfortunately, the top of the peak was still mostly frozen when we were in Moab, so we opted for the shorter, but equally awesome, Porcupine Rim Trail.
-
+<figure>
+<a href="/assets/images/moab/rim.jpg"><img src="/assets/images/moab/rim.jpg"></a>
+</figure>
+>You start pretty high up..
+<figure class="half">
+<a href="/assets/images/moab/hanging.jpg"><img src="/assets/images/moab/hanging.jpg"></a>
+<a href="/assets/images/moab/ledge.jpg"><img src="/assets/images/moab/ledge.jpg"></a>
+</figure>
 ### Slickrock
 
 ## Arches
