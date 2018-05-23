@@ -12,13 +12,13 @@ This page is still a work in progress.
 
 A little-known gem at Clemson University is [CORE][CORE]. CORE organizes amazing trips, offers workshops teaching outdoor skills, and provides excellent rental equipment for university students. I took a leap of faith for spring break and decided to sign up for their mountain biking trip to [Moab, Utah][Moab]. Prior to the trip, you could say my mountain biking experience was lacking...I had never ridden a mountain bike on anything that would be considered an official trail. Moab is known for having some of the best and most difficult mountain biking trails in the world, so I was banking on being a quick study.
 
-*[CORE]: Clemson Outdoor Recreation and Education Program 
+*[CORE]: Clemson Outdoor Recreation and Education Program
 
 <figure>
 <a href="/assets/images/moab/bike.jpg"><img src="/assets/images/moab/bike.jpg"></a>
 </figure>
 ## Mountain Biking Trails
-
+We had 5 days to mountain bike and we weren't going to waste any of it. We hit 5 different trails and had a blast riding them.
 ### Moab Brand Trails
 
 #### EZ
@@ -26,8 +26,12 @@ A little-known gem at Clemson University is [CORE][CORE]. CORE organizes amazing
 ### Klonzo Trails
 
 ### Klondike Bluffs
-
+<figure class="half">
+<a href="/assets/images/moab/clemson.jpg"><img src="/assets/images/moab/clemson.jpg"></a>
+<a href="/assets/images/moab/sitting.jpg"><img src="/assets/images/moab/sitting.jpg"></a>
+</figure>
 ### Porcupine Rim
+The Whole Enchilada is a world famous mountain biking trail that takes riders down from the alpine peak to the beautiful redrock deser, encompassing 31 miles of trail and 8,000' ft of descent. Unfortunately, the top of the peak was still mostly frozen when we were in Moab, so we opted for the shorter, but equally awesome, Porcupine Rim Trail.
 
 ### Slickrock
 
