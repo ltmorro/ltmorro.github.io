@@ -17,7 +17,7 @@ excerpt:
 </figure>
 A little-known gem at Clemson University is [CORE][CORE]. CORE organizes amazing trips, offers workshops teaching outdoor skills, and provides excellent rental equipment for university students. I took a leap of faith for spring break and decided to sign up for their mountain biking trip to [Moab, Utah][Moab]. Prior to the trip, you could say my mountain biking experience was lacking...I had never ridden a mountain bike on anything that would be considered an official trail. Moab is known for having some of the best and most difficult mountain biking trails in the world, so I was banking on being a quick study.
 
-<!-- *[CORE]: Clemson Outdoor Recreation and Education Program -->
+*[CORE]: Clemson Outdoor Recreation and Education Program
 
 We were gung-ho and drove 27 hours straight to Moab. We set up camp at the wonderful [Sand Flats Recreation Area][sand]. I would highly recommend this campsite to anyone thinking about visiting Moab, but be wary it is first come first serve, so come early in the day for a good spot.
 
