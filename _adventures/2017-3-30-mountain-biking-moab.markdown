@@ -7,7 +7,7 @@ header:
   teaser: "/assets/images/moab/bike.jpg"
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/moab/sunrise.jpg
+  overlay_image: "/assets/images/moab/sunrise.jpg"
   caption: "Sunrise at Sand Flats Recreation Area"
 excerpt:
   "Can a beginner conquer the world's greatest mountain biking?"

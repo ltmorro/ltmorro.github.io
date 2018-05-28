@@ -86,6 +86,9 @@ author:
 
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
+
+#Google Analytics
+google_analytics: UA-119990394-1
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
