@@ -82,7 +82,7 @@ author:
   bio    : "Graduate student at Clemson University."
   email  : "ltmorro@gmail.com "# optional
   linkedin : "luke-morrow"
-  github : "ltmorro"
+  #github : "ltmorro"
 
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
