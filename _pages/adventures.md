@@ -22,7 +22,7 @@ moab:
   - image_path: "/assets/images/moab/bike.jpg"
     alt: "Moab Biking"
     title: "Mountain Biking in Moab, Utah"
-    excerpt: "Can a beginner conquer the world's greatest mountain biking? I "
+    excerpt: "Can a beginner conquer the world's greatest mountain biking?"
     url: "/adventures/2017-3-30-mountain-biking-moab/"
     btn_label: "Read More"
     btn_class: "btn--primary"
