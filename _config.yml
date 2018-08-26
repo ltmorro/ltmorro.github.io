@@ -1,4 +1,4 @@
-theme: minimal-mistakes-jekyll
+remote-theme: minimal-mistakes-jekyll
 minimal_mistakes_skin: "dark"
 
 title: Luke Morrow
@@ -12,6 +12,7 @@ github_username:  ltmorro
 # Build settings
 markdown: kramdown
 plugins:
+  - jekyll-remote-theme
   - jekyll-feed
   - jekyll-paginate
   - jekyll-archives
