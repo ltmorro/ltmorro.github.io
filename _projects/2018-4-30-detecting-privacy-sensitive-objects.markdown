@@ -8,7 +8,10 @@ excerpt: "Detecting and classifying objects as public and private to make better
 header:
   teaser: "/assets/images/Cooccurrence.png"
 author_profile: true
-
+toc: true
+toc_sticky: true
+toc_label: Privacy-Sensitive Objects
+toc_icon: bars
 ---
 This page is still a work in progress.
 

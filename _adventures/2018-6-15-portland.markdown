@@ -19,7 +19,18 @@ excerpt:
 ## Hoyt Arboretum ##
 
 ## Silver Falls ##
-
+<figure>
+<a href="/assets/images/portland/falls.jpg"><img src="/assets/images/portland/falls.jpg"></a>
+</figure>
+<figure>
+<a href="/assets/images/portland/falls2.jpg"><img src="/assets/images/portland/falls2.jpg"></a>
+</figure>
+<figure>
+<a href="/assets/images/portland/falls3.jpg"><img src="/assets/images/portland/falls3.jpg"></a>
+</figure>
+<figure>
+<a href="/assets/images/portland/falls.mp4"><img src="/assets/images/portland/falls.mp4"></a>
+</figure>
 ## Cannon Beach ##
 
 ## Columbia River Gorge ##

@@ -8,13 +8,18 @@ excerpt: "From the 1994 Census Data, can we predict who makes over or under $50k
 header:
   teaser: "/assets/images/census/teaser.png"
 author_profile: true
+toc: true
+toc_sticky: true
+toc_label: Predicting Income
+toc_icon: bars
 ---
+
 The goal of this data science project is to predict if an individual makes greater than or less than $50K based on certain attributes using R. The data set is sourced from the 1994 United States census and is provided by the [UC Irvine Machine Learning Repository][uc_irvine]. I fit my model using a logistic regression to better understand the effect of various variables on the likelihood that an individual earns more or less than fifty thousand dollars. You can find my source code on [Github][git].
 
 ## About the Data
 The data set is composed of two partitions: training and test data. The data was split using MLC++ GenCVFiles with ⅔ of the data serving as training data and ⅓ serving as testing data. The training data set is composed of 32,561 observations and the test data is composed of 16,281 observations. The data set includes 15 variables: 6 continuous and 9 discrete.
 
-### Continuous Variables:
+### Continuous Variables
 ```
 age
 fnlwgt
@@ -25,7 +30,7 @@ hours-per-week
 ```
 #### Description of fnlwgt
 fnlwgt is the final sampling weight. This measure is included because a portion of the United States population is unable to complete a census including citizens in incarceration and active duty military members. The inclusion of final weight attempts to correct the systematic differences in selection probabilities.
-### Discrete Variables:
+### Discrete Variables
 ```
 >50K or ≤50K
 workclass
@@ -237,7 +242,7 @@ $$
 The accuracy of the model when tested against the validation set was 85.21%. On the other hand, the specificity (true negative rate) of the model was lacking at 57.31%.
 
 
-### Conclusion
+## Conclusion
 The largest indicator of a citizen making greater than $50K is having a marital status of ‘married’. The fitted model says that, holding all other variables constant, the odds that a citizen makes over $50K increases by a factor of 4.379 or 5.808 if the citizen is an armed forces married person or a civilian married person, respectively. This may be slightly misleading since households typically complete one census, so the reported income may be a combination of both the spouse’s income. A person is 2.407 times more likely to make over $50K if their relationship status is Wife. This also may be a result of the nature of completing a census as a household.
 
 Another strong indicator is years of education. Controlling for all other variables, for every one year increase in education, the inhabitant is 1.312 times more likely to make more than $50K. Occupations in which one needs higher education, such as executive/managerial, professional/specialty, and tech support positions, also have a positive effect on the odds of making greater than $50K.
