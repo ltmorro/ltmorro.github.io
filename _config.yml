@@ -14,11 +14,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Luke Morrow
-email: ltmorro@gmail.com
+email: luke@lukemorrow.me
 description: >- # this means to ignore newlines until "baseurl:"
   Welcome to my personal website! I'm glad you've arrived!
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://ltmorro.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://lukemorrow.me" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  ltmorro
 
 # Build settings
@@ -80,7 +80,7 @@ author:
   avatar : "/assets/images/profile.png"
   location : "Clemson, SC"
   bio    : "Graduate student at Clemson University."
-  email  : "ltmorro@gmail.com "# optional
+  email  : "luke@lukemorrow.me"# optional
   linkedin : "luke-morrow"
   #github : "ltmorro"
 
