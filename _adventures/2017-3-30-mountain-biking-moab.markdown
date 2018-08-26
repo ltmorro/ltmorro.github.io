@@ -11,6 +11,10 @@ header:
   caption: "Sunrise at Sand Flats Recreation Area"
 excerpt:
   "Can a beginner conquer the world's greatest mountain biking?"
+toc: true
+toc_sticky: true
+toc_label: Mountain Biking
+toc_icon: bars
 ---
 <figure>
 <a href="/assets/images/moab/bike.jpg"><img src="/assets/images/moab/bike.jpg"></a>
