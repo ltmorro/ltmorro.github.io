@@ -26,7 +26,18 @@ moab:
     url: "/adventures/2017-3-30-mountain-biking-moab/"
     btn_label: "Read More"
     btn_class: "btn--primary"
+
+clemson:
+  - image_path: "/assets/images/clemson/tillman.jpg"
+    alt: "Clemson"
+    title: "Embracing Clemson's Nature"
+    excerpt: "My years at Clemson have fueled my love for the outdoors. There is an incredibly vast amount of trails, parks, and lakes that are perfect for breaks from my studies."
+    url: "/adventures/2018-8-20-clemson/"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
 ---
 {% include feature_row id="portland" type="left" %}
 
 {% include feature_row id="moab" type="left" %}
+
+{% include feature_row id="clemson" type="left" %}

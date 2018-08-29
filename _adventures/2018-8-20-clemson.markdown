@@ -1,0 +1,69 @@
+---
+layout: single
+title: "Embracing Clemson's Nature"
+date: 2018-8-20 17:44:44 -0400
+author_profile: true
+header:
+  teaser: "/assets/images/clemson/tillman.jpg"
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: "/assets/images/clemson/pano.jpg"
+excerpt:
+    "\"There's something in these Hills\" - Joe Sherman"
+toc: true
+toc_sticky: true
+toc_icon: bars
+toc_label: "Clemson"
+---
+This page is still a work in progress.
+## Trails ##
+
+### Foothills Trail ###
+<figure>
+<a href="/assets/images/clemson/couple.jpg"><img src="/assets/images/clemson/couple.jpg"></a>
+</figure>
+
+<figure>
+<a href="/assets/images/clemson/backpack_group.jpg"><img src="/assets/images/clemson/backpack_group.jpg"></a>
+</figure>
+
+<figure>
+<a href="/assets/images/clemson/sassafras.jpg"><img src="/assets/images/clemson/sassafras.jpg"></a>
+</figure>
+
+<figure>
+<a href="/assets/images/clemson/pinnacle.jpg"><img src="/assets/images/clemson/pinnacle.jpg"></a>
+</figure>
+
+### Gorges State Park, NC ###
+<figure>
+<a href="/assets/images/clemson/rainbow.jpg"><img src="/assets/images/clemson/rainbow.jpg"></a>
+</figure>
+<figure>
+<a href="/assets/images/clemson/turtle.jpg"><img src="/assets/images/clemson/turtle.jpg"></a>
+</figure>
+
+### Tallulah Gorge, GA ###
+<figure>
+<a href="/assets/images/clemson/tallulah.jpg"><img src="/assets/images/clemson/tallulah.jpg"></a>
+</figure>
+
+### Stumphouse Tunnel ###
+<figure>
+<a href="/assets/images/clemson/stumphouse.jpg"><img src="/assets/images/clemson/stumphouse.jpg"></a>
+</figure>
+
+## Lakes ##
+### Lake Keowee ###
+<figure>
+<a href="/assets/images/clemson/keowee.jpg"><img src="/assets/images/clemson/keowee.jpg"></a>
+</figure>
+
+<figure>
+<a href="/assets/images/clemson/jump.jpg"><img src="/assets/images/clemson/jump.jpg"></a>
+</figure>
+
+### Lake Hartwell ###
+<figure>
+<a href="/assets/images/clemson/quarry.jpg"><img src="/assets/images/clemson/quarry.jpg"></a>
+</figure>

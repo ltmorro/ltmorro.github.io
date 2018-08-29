@@ -24,6 +24,10 @@ toc_label: Portland
 <figure>
 <a href="/assets/images/portland/pittock.jpg"><img src="/assets/images/portland/pittock.jpg"></a>
 </figure>
+
+<figure>
+<a href="/assets/images/portland/tree.jpg"><img src="/assets/images/portland/tree.jpg"></a>
+</figure>
 ## Silver Falls ##
 <figure>
 <a href="/assets/images/portland/falls.jpg"><img src="/assets/images/portland/falls.jpg"></a>
