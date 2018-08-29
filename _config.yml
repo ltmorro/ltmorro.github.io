@@ -71,8 +71,7 @@ author:
   linkedin : "luke-morrow"
   #github : "ltmorro"
 
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
+
 
 #Google Analytics
 google_analytics: UA-119990394-1
