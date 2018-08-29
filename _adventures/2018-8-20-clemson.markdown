@@ -4,7 +4,7 @@ title: "Embracing Clemson's Nature"
 date: 2018-8-20 17:44:44 -0400
 author_profile: true
 header:
-  teaser: "/assets/images/clemson/tillman.jpg"
+  teaser: "/assets/images/clemson/backpack_group.jpg"
   overlay_color: "#000"
   overlay_filter: "0.5"
   overlay_image: "/assets/images/clemson/pano.jpg"

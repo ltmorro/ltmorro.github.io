@@ -28,7 +28,7 @@ moab:
     btn_class: "btn--primary"
 
 clemson:
-  - image_path: "/assets/images/clemson/tillman.jpg"
+  - image_path: "/assets/images/clemson/backpack_group.jpg"
     alt: "Clemson"
     title: "Embracing Clemson's Nature"
     excerpt: "My years at Clemson have fueled my love for the outdoors. There is an incredibly vast amount of trails, parks, and lakes that are perfect for breaks from my studies."
