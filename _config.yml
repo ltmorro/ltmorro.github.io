@@ -8,7 +8,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://lukemorrow.me" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  ltmorro
-
+repository: ltmorro/ltmorro.github.ioxy
 # Build settings
 markdown: kramdown
 plugins:
