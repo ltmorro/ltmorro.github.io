@@ -36,9 +36,21 @@ adoption:
     url: "/projects/2017-12-30-adoption-incentive-program-visualization/"
     btn_label: "Read More"
     btn_class: "btn--primary"
+
+mcadams:
+  - image_path: "/assets/images/mcadams/mcadams.png"
+    alt: "mcadams map"
+    title: "School of Computing Map"
+    excerpt: "An interactive map to assist visitors with navigation. In this project, I use Python and Tkinter to implement the map."
+    url: "/projects/2018-6-30-mcadams-map/"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+
 ---
 {% include feature_row id="privacy" type="left" %}
 
 {% include feature_row id="income" type="left" %}
 
 {% include feature_row id="adoption" type="left" %}
+
+{% include feature_row id="mcadams" type="left" %}
