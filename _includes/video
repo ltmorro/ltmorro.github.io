@@ -4,7 +4,7 @@
 <!-- Courtesy of embedresponsively.com //-->
 <div class="responsive-video-container">
 {% if video_provider == "local" %}
-  <video src="{{ video_id }}" frameborder="0" autostart="0" autoplay="0" controls="controls" allowFullScreen type="video/mp4"></video>
+  <video src="{{ video_id }}" frameborder="0" controls="controls" allowFullScreen type="video/mp4"></video>
 {% elsif video_provider == "google" %}
   <iframe src="https://drive.google.com/file/d/{{ video_id }}" frameborder="0" allowFullScreen></iframe>
 {% elsif video_provider == "vimeo" %}
