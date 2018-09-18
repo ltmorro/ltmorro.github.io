@@ -16,7 +16,12 @@ toc_icon: bars
 toc_label: "Clemson"
 ---
 This page is still a work in progress.
+
+Clemson is situated in the beautiful Blue Ridge Mountains which contain a great amount of trails and lakes that are perfect for exploring. Joe Sherman, Clemson class of 1934, described Clemson in a much better way than I could ever imagine.
+> My thoughts often wander through these upper South Carolina hills that shelter the University that forms a common bond for many thousands of people who have studied here, or taught here or worked here. There’s something in these hills that has touched every one of them, something that has rubbed off on them in varying degrees, something that has built within the breasts of all Clemson men and women an enduring spark akin to an eternal pride. <cite><a href="https://alumni.clemson.edu/something-in-these-hills/">Joe Sherman</a></cite>
+
 ## Trails ##
+Hiking trails is one of my favorite weekend pastimes.
 
 ### Foothills Trail ###
 <figure>
