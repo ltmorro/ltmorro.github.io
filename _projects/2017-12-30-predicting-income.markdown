@@ -233,13 +233,13 @@ $$
 \begin{array}{|c|c|c|c|}
 \hline
 & <= $50K & > $50K & Sum \\ \hline
- <= $50K & 11669 & 766 & 12435 \\ \hline
+ <= $50K & 11669 & 766 & 12445 \\ \hline
  > $50K & 1642 & 2204 & 3846 \\ \hline
  Sum & 13311 & 2970 & 16281 \\ \hline
 \end{array}
 $$
 
-The accuracy of the model when tested against the validation set was 85.21%. On the other hand, the specificity (true negative rate) of the model was lacking at 57.31%.
+The accuracy of the model when tested against the validation set was 85.21%. The precision of the model was 93.7%.
 
 
 ## Conclusion
