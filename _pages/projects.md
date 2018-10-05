@@ -50,7 +50,7 @@ data_science:
   - image_path: "/assets/images/datascience/new_york.png"
     alt: "data science jobs"
     title: "Data Science Job Skills"
-    excerpt: "I mined data scientist job postings to find out what skills were the most common across the country. I use Python and Matplotlib for this exploratory analysis."
+    excerpt: "I mined data scientist job postings to find out what skills were the most common across the country. I use Python for this exploratory analysis."
     url: "/projects/2018-9-30-data-science-jobs/"
     btn_label: "Read More"
     btn_class: "btn--primary"
