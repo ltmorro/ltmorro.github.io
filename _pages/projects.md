@@ -14,7 +14,7 @@ privacy:
   - image_path: "/assets/images/Cooccurrence.png"
     alt: "Cooccurrence network"
     title: "Detecting Privacy-Sensitive Objects"
-    excerpt: "Detecting and classifying objects as public and private to make better privacy setting recommendations on social media."
+    excerpt: "Detecting and classifying objects in images as public and private to make better privacy setting recommendations on social media."
     url: "/projects/2018-4-30-detecting-privacy-sensitive-objects/"
     btn_label: "Read More"
     btn_class: "btn--primary"

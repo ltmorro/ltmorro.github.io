@@ -35,7 +35,7 @@ In this screenshot, you can see the job results are listed in `<td id="resultsCo
 </figure>
 Finally, we can see that the individual job titles are in `<h2 id="jobtitle">`. We'll go through the table and grab each link for more information about the jobs.
 
-So, how do we actually get the information we want? The answer is python libraries `requests` and `BeautifulSoup`. `requests` allows us to format the request parameters in a python dictionary which makes sending http requests incredibly simple. In the code snippet below, I send a request for the job and location supplied in the parameters. Then, I use `BeautifulSoup` to parse the response's HTML content. Notice we search for the elements that I highlighted in the screenshots above. I simply append the links to a list for the next step of the mining.  
+So, how do we actually get the information we want? The answer is python libraries `requests` and `BeautifulSoup`. `requests` allows us to format the request parameters in a python dictionary which makes sending http requests incredibly simple. In an attempt to not overwhelm (DDOS) their servers, I sleep for 1 second after every request. In the code snippet below, I send a request for the job and location supplied in the parameters. Then, I use `BeautifulSoup` to parse the response's HTML content. Notice we search for the elements that I highlighted in the screenshots above. I simply append the links to a list for the next step of the mining.  
 
 ```python
 def get_links(job, location):
@@ -136,18 +136,60 @@ def download_jobs(links, location, file_path):
     job_df.to_csv(location+".csv")
 ```
 ## Analyzing Data ##
+I was interested in the most common programming languages, analysis tools, frameworks for distributed computing, and database languages. I used a Counter dictionary to count the words. Then, I filtered out the specific words I was looking for.
+```python
+job_df = pd.read_csv(location+".csv", encoding="ISO-8859-1")
+
+top_words = Counter()
+num_jobs = 0
+for summary in job_df["content"]:
+    num_jobs += 1
+    for word in summary.split():
+        clean_word = word.translate(str.maketrans("","",string.punctuation)).lower()
+
+        top_words[clean_word] += 1
+
+program_lang = {'Python':top_words['python'], 'R':top_words['r'],
+                'Java':top_words['java'], 'C':top_words['c'],
+                'Ruby':top_words['ruby'], 'Perl':top_words['perl'],
+                'Matlab':top_words['matlab'], 'JavaScript':top_words['javascript'],
+                'Scala': top_words['scala']}
+
+analysis_tools = {'Excel':top_words['excel'],  'Tableau':top_words['tableau'],
+            'SAS':top_words['sas'],'SPSS':top_words['spss'], 'D3':top_words['d3']}
+
+distributed_tools = {'Hadoop':top_words['hadoop'], 'MapReduce':top_words['mapreduce'],
+            'Spark':top_words['spark'], 'Pig':top_words['pig'],
+            'Hive':top_words['hive'], 'Shark':top_words['shark'],
+            'Oozie':top_words['oozie'], 'ZooKeeper':top_words['zookeeper'],
+            'Flume':top_words['flume'], 'Mahout':top_words['mahout']}
+
+database_lang = {'SQL':top_words['sql'], 'NoSQL':top_words['nosql'],
+                'HBase':top_words['hbase'], 'Cassandra':top_words['cassandra'],
+                'MongoDB':top_words['mongodb']}
+
+python_libs = {'Tensorflow':top_words['tensorflow'], 'Matplotlib':top_words['matplotlib'],
+              'Scikit':top_words['scikit'], 'Numpy':top_words['numpy'], 'Pandas':top_words['pandas'],
+               'Keras':top_words['keras'], 'NLTK':top_words['nltk'], 'Pyspark':top_words['pyspark']}
+```
+To visualize the data, I used `matplotlib`.
+
+### City by City ###
+I mined all data science jobs on Indeed for the following locations: New York, San Francisco, Chicago, Boston, Seattle, Denver, Houston, and Houston.
+
 <figure class="half">
 <a href="/assets/images/datascience/new_york.png"><img src="/assets/images/datascience/new_york.png"></a>
 <a href="/assets/images/datascience/san_francisco.png"><img src="/assets/images/datascience/san_francisco.png"></a>
 <a href="/assets/images/datascience/chicago.png"><img src="/assets/images/datascience/chicago.png"></a>
 <a href="/assets/images/datascience/boston.png"><img src="/assets/images/datascience/boston.png"></a>
 <a href="/assets/images/datascience/seattle.png"><img src="/assets/images/datascience/seattle.png"></a>
+<a href="/assets/images/datascience/denver.png"><img src="/assets/images/datascience/denver.png"></a>
 <a href="/assets/images/datascience/houston.png"><img src="/assets/images/datascience/houston.png"></a>
 <a href="/assets/images/datascience/austin.png"><img src="/assets/images/datascience/austin.png"></a>
-<a href="/assets/images/datascience/denver.png"><img src="/assets/images/datascience/denver.png"></a>
 </figure>
 
-## Nationwide ##
+### Nationwide ###
+Following my analysis of specific cities, I was curious if the trends held true for the entire country. So, I mined all of the job postings containing "data scientist".
 <figure>
 <a href="/assets/images/datascience/nation_program.png"><img src="/assets/images/datascience/nation_program.png"></a>
 </figure>
@@ -167,5 +209,16 @@ def download_jobs(links, location, file_path):
 <figure>
 <a href="/assets/images/datascience/nation_python.png"><img src="/assets/images/datascience/nation_python.png"></a>
 </figure>
+
+## Results ##
+The top programming language was Python with % of jobs including Python.
+
+The top analysis tool was SAS with % of jobs including SAS.
+
+The top distributed computing framework was Apache Spark with % of jobs including Spark.
+
+The top database language was SQL with % of jobs including SQL.
+
+The top Python library was Tensorflow with % of jobs including Tensorflow.
 
 [github]: https://github.com/ltmorro/job_analytics
