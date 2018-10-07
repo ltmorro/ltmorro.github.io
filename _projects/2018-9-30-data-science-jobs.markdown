@@ -136,43 +136,70 @@ def download_jobs(links, location, file_path):
     job_df.to_csv(location+".csv")
 ```
 ## Analyzing Data ##
-I was interested in the most common programming languages, analysis tools, frameworks for distributed computing, and database languages. I used a Counter dictionary to count the words. Then, I filtered out the specific words I was looking for.
+I was interested in the most common programming languages, analysis tools, frameworks for distributed computing, and database languages.
+
+To start the analysis, let's convert the job summaries to integers counts. I used a Counter class which is a specialized dictionary for counting hashable objects. Then, I filtered out the specific words I was looking for.
 ```python
-job_df = pd.read_csv(location+".csv", encoding="ISO-8859-1")
+def get_word_counts(top_cites):
+    word_counts = Counter()
+    num_jobs = 0
+    for city in top_cites:
+        # create a dataframe from the mined data
+        job_df = pd.read_csv(city+".csv", encoding="ISO-8859-1")
+        for summary in job_df["content"]:
+            # keep track of number of jobs to convert to percentage
+            num_jobs += 1
+            for word in summary.split():
+                # remove punctuation and make all words lower case
+                clean_word = word.translate(str.maketrans("","",string.punctuation)).lower()
+                word_counts[clean_word] += 1
+    return word_counts, num_jobs
+```
+I created filters for the topics that I was interested in.
+```python
+program_lang_filter = ['Python', 'R', 'Java', 'C', 'Ruby', 'Perl', 'Matlab', 'JavaScript', 'Scala']
+analysis_filter = ['Excel', 'Tableau','SAS', 'SPSS','D3']
+distributed_filter = ['Hadoop', 'MapReduce', 'Spark', 'Pig', 'Hive', 'Shark', 'Oozie', 'ZooKeeper', 'Flume', 'Mahout']
+database_filter = ['SQL', 'NoSQL', 'HBase', 'Cassandra', 'MongoDB']
+lib_filter = ['Tensorflow', 'Matplotlib', 'Scikit', 'Numpy', 'Pandas', 'Keras', 'NLTK', 'Pyspark']
+```
+Then, I simply created new dictionaries for each filter list, and converted it to a `pandas` dataframe.
+```python
+def filter_words(word_counts, num_jobs, filter):
+    filtered_words = {}
+    # select words from the counts that we want
+    for word in filter:
+        filtered_words[word]= word_counts[word.lower()]
+    # create dataframe from dictionary and convert raw counts to percentages
+    filtered_df = pd.DataFrame.from_dict(filtered_words, orient="index")
+    filtered_df.columns = ["Percent"]
+    filtered_df["Percent"] = filtered_df["Percent"]/num_jobs*100
 
-top_words = Counter()
-num_jobs = 0
-for summary in job_df["content"]:
-    num_jobs += 1
-    for word in summary.split():
-        clean_word = word.translate(str.maketrans("","",string.punctuation)).lower()
-
-        top_words[clean_word] += 1
-
-program_lang = {'Python':top_words['python'], 'R':top_words['r'],
-                'Java':top_words['java'], 'C':top_words['c'],
-                'Ruby':top_words['ruby'], 'Perl':top_words['perl'],
-                'Matlab':top_words['matlab'], 'JavaScript':top_words['javascript'],
-                'Scala': top_words['scala']}
-
-analysis_tools = {'Excel':top_words['excel'],  'Tableau':top_words['tableau'],
-            'SAS':top_words['sas'],'SPSS':top_words['spss'], 'D3':top_words['d3']}
-
-distributed_tools = {'Hadoop':top_words['hadoop'], 'MapReduce':top_words['mapreduce'],
-            'Spark':top_words['spark'], 'Pig':top_words['pig'],
-            'Hive':top_words['hive'], 'Shark':top_words['shark'],
-            'Oozie':top_words['oozie'], 'ZooKeeper':top_words['zookeeper'],
-            'Flume':top_words['flume'], 'Mahout':top_words['mahout']}
-
-database_lang = {'SQL':top_words['sql'], 'NoSQL':top_words['nosql'],
-                'HBase':top_words['hbase'], 'Cassandra':top_words['cassandra'],
-                'MongoDB':top_words['mongodb']}
-
-python_libs = {'Tensorflow':top_words['tensorflow'], 'Matplotlib':top_words['matplotlib'],
-              'Scikit':top_words['scikit'], 'Numpy':top_words['numpy'], 'Pandas':top_words['pandas'],
-               'Keras':top_words['keras'], 'NLTK':top_words['nltk'], 'Pyspark':top_words['pyspark']}
+    return filtered_df
 ```
 To visualize the data, I used `matplotlib`.
+```python
+def plot_top(df, title):
+    #use the seaborn chart styling
+    plt.style.use("seaborn")
+    #name column to Jobs
+    df.columns=["Jobs"]
+    #sort by count in column Jobs
+    df= df.sort_values(by="Jobs", ascending=False)
+    top=df.plot(kind='bar')
+    #set title and y label
+    plt.title(title)
+    plt.ylabel("Percentage")
+    #label each bar with percentage value
+    for idx, label in enumerate(list(df.index)):
+        for acc in df.columns:
+            value = np.round(df.ix[idx][acc],decimals=2)
+            top.annotate(value,
+                        (idx, value),
+                         xytext=(0, 0),horizontalalignment="center",
+                         textcoords='offset points')
+    plt.show()
+```
 
 ### City by City ###
 I mined all data science jobs on Indeed for the following locations: New York, San Francisco, Chicago, Boston, Seattle, Denver, Houston, and Houston.
@@ -211,14 +238,14 @@ Following my analysis of specific cities, I was curious if the trends held true 
 </figure>
 
 ## Results ##
-The top programming language was Python with % of jobs including Python.
+The top programming language was Python with nearly three quarters of jobs including Python.
 
-The top analysis tool was SAS with % of jobs including SAS.
+The top analysis tool was SAS with 18.92% of jobs including SAS.
 
-The top distributed computing framework was Apache Spark with % of jobs including Spark.
+The top distributed computing framework was Apache Spark with 22.8% of jobs including Spark.
 
-The top database language was SQL with % of jobs including SQL.
+The top database language was SQL with 51.61% of jobs including SQL.
 
-The top Python library was Tensorflow with % of jobs including Tensorflow.
+The top Python library was Tensorflow with 8.71% of jobs including Tensorflow.
 
 [github]: https://github.com/ltmorro/job_analytics
