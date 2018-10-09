@@ -11,8 +11,6 @@ toc_sticky: true
 toc_label: Data Science Skills
 toc_icon: bars
 ---
-This page is still a work in progress.
-
 My Master's degree is quickly coming to an end, so now is the time to start my job search. It's my goal to find a position as a data scientist. *(Please hire me.)*
 
 I had an idea that if I wanted to become a data scientist, I should find out what skills are most useful and desired in the field, and then work on my proficiency in those tools. That idea sprouted into this project: mining data scientist job postings to find the most frequent required skills. I mined the job postings using Python libraries `requests` and `BeautifulSoup`. I created visualizations of the desired qualifications using `matplotlib`.
@@ -202,7 +200,7 @@ def plot_top(df, title):
 ```
 
 ### City by City ###
-I mined all data science jobs on Indeed for the following locations: New York, San Francisco, Chicago, Boston, Seattle, Denver, Houston, and Houston.
+I mined all data science jobs on Indeed for the following locations: New York, San Francisco, Chicago, Boston, Seattle, Denver, Houston, and Houston. Included below are the graphs outputs for each city.
 
 <figure class="half">
 <a href="/assets/images/datascience/new_york.png"><img src="/assets/images/datascience/new_york.png"></a>
