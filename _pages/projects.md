@@ -54,6 +54,15 @@ data_science:
     url: "/projects/2018-9-30-data-science-jobs/"
     btn_label: "Read More"
     btn_class: "btn--primary"
+
+recipe:
+  - image_path: "/assets/images/recipes/cuisine_bar.png"
+    alt: "recipe classification"
+    title: "Cuisine Classification"
+    excerpt: "From the ingredients in a recipe, can we predict the cuisine? I train several models and evaluate their performance in Python."
+    url: "/projects/2018-9-30-predicting-cuisine/"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
 ---
 
 {% include feature_row id="data_science" type="left" %}
