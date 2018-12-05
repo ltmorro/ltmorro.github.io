@@ -148,7 +148,7 @@ In addition, I feel that we could improve our project results by training YOLO90
 
 
 [data]: http://l3s.de/picalert/
-[iprivacy]: http://web.mst.edu/~lindan/papers/iprivacy.pdf
+[iprivacy]: https://par.nsf.gov/servlets/purl/10026310
 [yolo]: https://pjreddie.com/darknet/yolo/
 [coco]: http://cocodataset.org/
 [gephi]: https://gephi.org
