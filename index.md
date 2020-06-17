@@ -9,7 +9,7 @@ header:
 excerpt: "Learn a little about me."
 ---
 
-I'm currently fostering my love for computing at Clemson University. I am in pursuit of my Master of Science in Computer Science degree.
+I'm currently working as a Data Scientist at a Marketing Agency in Austin, TX. 
 
 I graduated with a Master of Science in Computer Science from Clemson University in 2018. My area of focus is Informatics and Scientific Computation. I'm captivated by data science, machine learning, artificial intelligence, and cyber security. Interested in what I've done? Look [here!][projects]
 
