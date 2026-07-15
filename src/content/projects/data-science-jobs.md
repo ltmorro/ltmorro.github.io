@@ -3,7 +3,7 @@ title: "Data Science Skills"
 date: 2018-09-30
 ---
 
-My Master's degree is quickly coming to an end, so now is the time to start my job search. It's my goal to find a position as a data scientist. *(Please hire me.)*
+My Master's degree is quickly coming to an end, so now is the time to start my job search. It's my goal to find a position as a data scientist.
 
 I had an idea that if I wanted to become a data scientist, I should find out what skills are most useful and desired in the field, and then work on my proficiency in those tools. That idea sprouted into this project: mining data scientist job postings to find the most frequent required skills. I mined the job postings using Python libraries `requests` and `BeautifulSoup`. I created visualizations of the desired qualifications using `matplotlib`.
 

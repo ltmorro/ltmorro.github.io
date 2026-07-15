@@ -5,8 +5,6 @@ excerpt: "A visual exploration of the effectiveness of the Adoption Incentive Pr
 image: "/images/adoption.png"
 ---
 
-This page is still a work in progress.
-
 <figure>
 <a href="https://ltmorro.shinyapps.io/final/"><img src="/images/adoption/adoption.png"></a>
 </figure>
