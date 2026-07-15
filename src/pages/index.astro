@@ -9,19 +9,41 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     <div class="prose">
       <p>
-        I'm currently working as a Data Scientist at a Marketing Agency in Austin, TX.
+        I'm a backend engineer working on AI insights tooling at <strong>Spotify</strong>.
       </p>
       <p>
-        I graduated with a Master of Science in Computer Science from Clemson University in
-        2018. My area of focus is Informatics and Scientific Computation. I'm captivated by
-        data science, machine learning, artificial intelligence, and cyber security.
-        Interested in what I've done? Look <a href="/projects/">here!</a>
+        Outside of work I spend time backpacking, mountain biking, kayaking, and camping. A few
+        of those trips are written up in <a href="/adventures/">adventures</a>, with more to come.
+        I also brew beer and build small apps in my spare time.
       </p>
       <p>
-        When I'm not programming, you can find me exploring the great outdoors. I relish any
-        activity that brings me outside including backpacking, mountain biking, kayaking, and
-        camping! Check out some of my adventures <a href="/adventures/">here!</a>
+        I hold a Master of Science in Computer Science from Clemson University, with a focus on
+        informatics and scientific computation. The <a href="/projects/">projects</a> section is an
+        archive from that period.
       </p>
+    </div>
+
+    <div class="rule" aria-hidden="true"></div>
+  </section>
+
+  <section class="section container elsewhere">
+    <p class="eyebrow">Elsewhere</p>
+    <div class="link-row">
+      <a class="btn" href="https://www.linkedin.com/in/luke-morrow" target="_blank" rel="noopener noreferrer"
+        >LinkedIn <span aria-hidden="true">↗</span></a
+      >
+      <a class="btn" href="https://github.com/ltmorro" target="_blank" rel="noopener noreferrer"
+        >GitHub <span aria-hidden="true">↗</span></a
+      >
+      <a class="btn" href="https://strava.app.link/R5BN3emEM4b" target="_blank" rel="noopener noreferrer"
+        >Strava <span aria-hidden="true">↗</span></a
+      >
+      <a class="btn" href="https://tour-de-friends.fly.dev/" target="_blank" rel="noopener noreferrer"
+        >Tour de Friends <span aria-hidden="true">↗</span></a
+      >
+      <a class="btn" href="https://notomorrowbrewing.com" target="_blank" rel="noopener noreferrer"
+        >Not Tomorrow Brewing <span aria-hidden="true">↗</span></a
+      >
     </div>
   </section>
 </BaseLayout>
@@ -33,5 +55,42 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   .prose p {
     font-size: 17px;
+  }
+
+  .prose strong {
+    font-weight: 600;
+    color: var(--color-accent);
+  }
+
+  .rule {
+    width: 56px;
+    height: 3px;
+    background: var(--color-accent);
+    margin-top: 32px;
+  }
+
+  .elsewhere {
+    padding-block-start: calc(var(--rhythm) / 2);
+  }
+
+  .link-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 16px;
+    padding: 28px;
+    background: var(--color-bg-alt);
+    border-radius: 14px;
+  }
+
+  .link-row .btn {
+    background: var(--color-bg);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, color 0.15s ease,
+      border-color 0.15s ease;
+  }
+
+  .link-row .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(178, 92, 57, 0.25);
   }
 </style>
