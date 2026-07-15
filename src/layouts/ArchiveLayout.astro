@@ -24,6 +24,7 @@ const { title, description, basePath, items } = Astro.props;
     <p class="eyebrow">{title}</p>
     <h1>{title}</h1>
     {description && <p class="lede">{description}</p>}
+    <slot />
   </section>
 
   <hr class="divider container" />

@@ -1,6 +1,7 @@
 ---
 title: "Data Science Skills"
 date: 2018-09-30
+archived: true
 ---
 
 My Master's degree is quickly coming to an end, so now is the time to start my job search. It's my goal to find a position as a data scientist.

@@ -4,6 +4,7 @@ date: 2018-08-20
 excerpt: "\"There's something in these Hills\" - Joe Sherman"
 image: "/images/clemson/backpack_group.jpg"
 heroImage: "/images/clemson/pano.jpg"
+heroAlt: "Panoramic view of forested Blue Ridge foothills and lakes near Clemson, South Carolina"
 ---
 
 Clemson is situated in the beautiful Blue Ridge Mountains which contain a great amount of trails and lakes that are perfect for exploring. Joe Sherman, Clemson class of 1934, described Clemson in a much better way than I could ever imagine.

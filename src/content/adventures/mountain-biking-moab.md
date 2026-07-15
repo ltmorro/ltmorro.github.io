@@ -4,6 +4,7 @@ date: 2017-03-30
 excerpt: "Can a beginner conquer the world's greatest mountain biking?"
 image: "/images/moab/bike.jpg"
 heroImage: "/images/moab/sunrise.jpg"
+heroAlt: "Sunrise over the red rock desert at Sand Flats Recreation Area in Moab, Utah"
 heroCaption: "Sunrise at Sand Flats Recreation Area"
 ---
 

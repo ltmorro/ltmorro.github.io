@@ -4,6 +4,7 @@ date: 2018-06-15
 excerpt: "Experiencing the Pacific Northwest"
 image: "/images/portland/redwood.jpg"
 heroImage: "/images/portland/pano.jpg"
+heroAlt: "Panoramic view of the Columbia River Gorge"
 heroCaption: "Columbia River Gorge"
 ---
 

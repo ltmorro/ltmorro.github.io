@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import ArchiveLayout from '../../layouts/ArchiveLayout.astro';
 
-const entries = (await getCollection('projects')).sort(
+const entries = (await getCollection('projects', ({ data }) => !data.draft)).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
 
@@ -17,7 +17,25 @@ const items = entries.map((entry) => ({
 
 <ArchiveLayout
   title="Projects"
-  description="An archive of data science and software projects from my time at Clemson."
+  description="Data science and software projects from my M.S. at Clemson (2017–2018), kept as an archive."
   basePath="/projects"
   items={items}
-/>
+>
+  <p class="current-note">
+    For what I'm building these days, see the <a href="/now/">now page</a> — or jump straight to
+    <a href="https://tour-de-friends.fly.dev/" target="_blank" rel="noopener noreferrer"
+      >Tour de Friends</a
+    > and
+    <a href="https://notomorrowbrewing.com" target="_blank" rel="noopener noreferrer"
+      >Not Tomorrow Brewing</a
+    >.
+  </p>
+</ArchiveLayout>
+
+<style>
+  .current-note {
+    max-width: 55ch;
+    color: var(--color-text-muted);
+    font-size: 15px;
+  }
+</style>

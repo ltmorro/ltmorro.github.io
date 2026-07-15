@@ -7,7 +7,10 @@ const entrySchema = z.object({
   excerpt: z.string().optional(),
   image: z.string().optional(),
   heroImage: z.string().optional(),
+  heroAlt: z.string().optional(),
   heroCaption: z.string().optional(),
+  archived: z.boolean().default(false),
+  draft: z.boolean().default(false),
 });
 
 const projects = defineCollection({

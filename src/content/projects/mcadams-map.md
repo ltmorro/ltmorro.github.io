@@ -1,6 +1,7 @@
 ---
 title: "School of Computing Map"
 date: 2018-06-30
+archived: true
 ---
 
 The goal of this project is to create an interactive map for visitors of McAdams Hall. McAdams Hall is the home of Clemson's School of Computing. To implement the map, I used Python's de-facto GUI, Tkinter. The full source code can be found on my [Github](https://github.com/ltmorro/mcadamsMap)

@@ -1,6 +1,7 @@
 ---
 title: "Adoption Incentive Program Visualization"
 date: 2017-12-30
+archived: true
 excerpt: "A visual exploration of the effectiveness of the Adoption Incentive Program."
 image: "/images/adoption.png"
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Detecting Privacy-Sensitive Objects"
 date: 2018-04-30
+archived: true
 excerpt: "Detecting and classifying objects as public and private to make better privacy setting recommendations on social media."
 image: "/images/Cooccurrence.png"
 ---
