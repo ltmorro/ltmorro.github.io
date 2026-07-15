@@ -12,30 +12,13 @@ const items = entries.map((entry) => ({
   excerpt: entry.data.excerpt,
   image: entry.data.image,
   date: entry.data.date,
+  archived: entry.data.archived,
 }));
 ---
 
 <ArchiveLayout
   title="Projects"
-  description="Data science and software projects from my M.S. at Clemson (2017–2018), kept as an archive."
+  description="Things I build in my spare time — current side projects up front, grad-school work (2017–2018) kept as an archive below."
   basePath="/projects"
   items={items}
->
-  <p class="current-note">
-    For what I'm building these days, see the <a href="/now/">now page</a> — or jump straight to
-    <a href="https://tour-de-friends.fly.dev/" target="_blank" rel="noopener noreferrer"
-      >Tour de Friends</a
-    > and
-    <a href="https://notomorrowbrewing.com" target="_blank" rel="noopener noreferrer"
-      >Not Tomorrow Brewing</a
-    >.
-  </p>
-</ArchiveLayout>
-
-<style>
-  .current-note {
-    max-width: 55ch;
-    color: var(--color-text-muted);
-    font-size: 15px;
-  }
-</style>
+/>
