@@ -1,0 +1,81 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+
+const links = [
+  { title: 'About', url: '/' },
+  { title: 'Projects', url: '/projects/' },
+  { title: 'Adventures', url: '/adventures/' },
+  { title: 'Blog', url: '/blog/' },
+];
+
+const path = Astro.url.pathname;
+---
+
+<header class="nav">
+  <div class="container nav__inner">
+    <a href="/" class="nav__brand ui-label">Luke Morrow</a>
+    <nav>
+      <ul class="nav__links">
+        {
+          links.map((link) => (
+            <li>
+              <a
+                href={link.url}
+                class="ui-label"
+                aria-current={path === link.url ? 'page' : undefined}
+              >
+                {link.title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+    <ThemeToggle />
+  </div>
+</header>
+
+<style>
+  .nav {
+    border-bottom: 1px solid var(--color-divider);
+  }
+
+  .nav__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding-block: 20px;
+  }
+
+  .nav__brand {
+    text-decoration: none;
+  }
+
+  .nav__links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav__links a {
+    text-decoration: none;
+    color: var(--color-text-muted);
+  }
+
+  .nav__links a[aria-current='page'] {
+    color: var(--color-text);
+  }
+
+  .nav__links a:hover {
+    color: var(--color-accent);
+  }
+
+  @media (max-width: 640px) {
+    .nav__links {
+      gap: 16px;
+    }
+  }
+</style>

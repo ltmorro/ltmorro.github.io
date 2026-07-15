@@ -1,0 +1,39 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <p class="ui-label">© {year} Luke Morrow</p>
+    <a
+      class="ui-label"
+      href="https://github.com/ltmorro"
+      target="_blank"
+      rel="noopener noreferrer">GitHub</a
+    >
+  </div>
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid var(--color-divider);
+    margin-top: var(--rhythm);
+  }
+
+  .footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 32px;
+    color: var(--color-text-muted);
+  }
+
+  .footer__inner a {
+    text-decoration: none;
+    color: var(--color-text-muted);
+  }
+
+  .footer__inner a:hover {
+    color: var(--color-accent);
+  }
+</style>
