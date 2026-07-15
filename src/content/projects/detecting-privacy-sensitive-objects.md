@@ -1,6 +1,7 @@
 ---
 title: "Detecting Privacy-Sensitive Objects"
 date: 2018-04-30
+archived: true
 excerpt: "Detecting and classifying objects as public and private to make better privacy setting recommendations on social media."
 image: "/images/Cooccurrence.png"
 ---
@@ -20,7 +21,7 @@ from ast import literal_eval #used to parse response from flickr
 
 #using the flickr api, download the json information for a photo ID
 def downloadJSON(photo_id, file_path):
-    url = "https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=cb9885c06e1861ad49bad63b6a6714d9&photo_id=" + photo_id + "&format=json&nojsoncallback=1"
+    url = "https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=YOUR_API_KEY&photo_id=" + photo_id + "&format=json&nojsoncallback=1"
     #get request
     response = get(url)
     #convert byte response to json string format

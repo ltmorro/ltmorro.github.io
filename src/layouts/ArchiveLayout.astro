@@ -7,6 +7,7 @@ interface Item {
   excerpt?: string;
   image?: string;
   date: Date;
+  archived?: boolean;
 }
 
 interface Props {
@@ -24,6 +25,7 @@ const { title, description, basePath, items } = Astro.props;
     <p class="eyebrow">{title}</p>
     <h1>{title}</h1>
     {description && <p class="lede">{description}</p>}
+    <slot />
   </section>
 
   <hr class="divider container" />
@@ -37,6 +39,7 @@ const { title, description, basePath, items } = Astro.props;
             <div class="card__body">
               <p class="ui-label card__date">
                 {item.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short' })}
+                {item.archived && <span class="card__badge">Archive</span>}
               </p>
               <h3>{item.title}</h3>
               {item.excerpt && <p class="card__excerpt">{item.excerpt}</p>}
@@ -89,6 +92,15 @@ const { title, description, basePath, items } = Astro.props;
   .card__date {
     color: var(--color-text-muted);
     margin-bottom: 8px;
+  }
+
+  .card__badge {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 8px;
+    border: 1px solid var(--color-divider);
+    border-radius: 999px;
+    font-size: 10px;
   }
 
   .card h3 {

@@ -7,12 +7,10 @@ const entrySchema = z.object({
   excerpt: z.string().optional(),
   image: z.string().optional(),
   heroImage: z.string().optional(),
+  heroAlt: z.string().optional(),
   heroCaption: z.string().optional(),
-});
-
-const posts = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/posts' }),
-  schema: entrySchema,
+  archived: z.boolean().default(false),
+  draft: z.boolean().default(false),
 });
 
 const projects = defineCollection({
@@ -25,4 +23,4 @@ const adventures = defineCollection({
   schema: entrySchema,
 });
 
-export const collections = { posts, projects, adventures };
+export const collections = { projects, adventures };

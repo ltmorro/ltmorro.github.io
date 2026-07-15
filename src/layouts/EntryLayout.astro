@@ -6,19 +6,33 @@ interface Props {
   excerpt?: string;
   date: Date;
   heroImage?: string;
+  heroAlt?: string;
   heroCaption?: string;
   backLabel: string;
   backHref: string;
+  archiveNote?: string;
+  ogImage?: string;
 }
 
-const { title, excerpt, date, heroImage, heroCaption, backLabel, backHref } = Astro.props;
+const {
+  title,
+  excerpt,
+  date,
+  heroImage,
+  heroAlt,
+  heroCaption,
+  backLabel,
+  backHref,
+  archiveNote,
+  ogImage,
+} = Astro.props;
 ---
 
-<BaseLayout title={title} description={excerpt}>
+<BaseLayout title={title} description={excerpt} ogImage={ogImage ?? heroImage}>
   {
     heroImage && (
       <figure class="hero">
-        <img src={heroImage} alt="" />
+        <img src={heroImage} alt={heroAlt ?? ''} />
         {heroCaption && <figcaption class="container">{heroCaption}</figcaption>}
       </figure>
     )
@@ -31,6 +45,7 @@ const { title, excerpt, date, heroImage, heroCaption, backLabel, backHref } = As
     </p>
     <h1>{title}</h1>
     {excerpt && <p class="entry-excerpt">{excerpt}</p>}
+    {archiveNote && <p class="archive-note">{archiveNote}</p>}
     <hr class="divider" />
     <div class="content">
       <slot />
@@ -78,6 +93,17 @@ const { title, excerpt, date, heroImage, heroCaption, backLabel, backHref } = As
     font-style: italic;
     font-size: 18px;
     color: var(--color-text-muted);
+  }
+
+  .archive-note {
+    display: inline-block;
+    font-size: 14px;
+    color: var(--color-text-muted);
+    background: var(--color-bg-alt);
+    border-left: 3px solid var(--color-accent);
+    border-radius: 0 6px 6px 0;
+    padding: 0.6em 1em;
+    margin: 0 0 24px;
   }
 
   .content :global(figure img) {

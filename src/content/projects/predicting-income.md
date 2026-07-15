@@ -1,6 +1,7 @@
 ---
 title: "Predicting Income from Census Data"
 date: 2017-12-30
+archived: true
 excerpt: "From the 1994 Census Data, can we predict who makes over or under $50k?"
 image: "/images/census/teaser.png"
 ---

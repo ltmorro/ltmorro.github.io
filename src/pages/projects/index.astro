@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import ArchiveLayout from '../../layouts/ArchiveLayout.astro';
 
-const entries = (await getCollection('projects')).sort(
+const entries = (await getCollection('projects', ({ data }) => !data.draft)).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
 
@@ -12,12 +12,13 @@ const items = entries.map((entry) => ({
   excerpt: entry.data.excerpt,
   image: entry.data.image,
   date: entry.data.date,
+  archived: entry.data.archived,
 }));
 ---
 
 <ArchiveLayout
   title="Projects"
-  description="An archive of data science and software projects from my time at Clemson."
+  description="Things I build in my spare time — current side projects up front, grad-school work (2017–2018) kept as an archive below."
   basePath="/projects"
   items={items}
 />

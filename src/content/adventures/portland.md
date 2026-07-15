@@ -4,6 +4,7 @@ date: 2018-06-15
 excerpt: "Experiencing the Pacific Northwest"
 image: "/images/portland/redwood.jpg"
 heroImage: "/images/portland/pano.jpg"
+heroAlt: "Panoramic view of the Columbia River Gorge"
 heroCaption: "Columbia River Gorge"
 ---
 
@@ -33,7 +34,7 @@ heroCaption: "Columbia River Gorge"
 </figure>
 
 <figure>
-<a href="/images/portland/falls.gif"><img src="/images/portland/falls.gif"></a>
+<a href="/images/portland/falls.webp"><img src="/images/portland/falls.webp" loading="lazy"></a>
 </figure>
 ## Cannon Beach
 <figure>

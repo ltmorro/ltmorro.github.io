@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import ArchiveLayout from '../../layouts/ArchiveLayout.astro';
 
-const entries = (await getCollection('adventures')).sort(
+const entries = (await getCollection('adventures', ({ data }) => !data.draft)).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
 

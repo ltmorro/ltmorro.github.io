@@ -5,7 +5,6 @@ const links = [
   { title: 'About', url: '/' },
   { title: 'Projects', url: '/projects/' },
   { title: 'Adventures', url: '/adventures/' },
-  { title: 'Blog', url: '/blog/' },
 ];
 
 const path = Astro.url.pathname;
@@ -22,7 +21,11 @@ const path = Astro.url.pathname;
               <a
                 href={link.url}
                 class="ui-label"
-                aria-current={path === link.url ? 'page' : undefined}
+                aria-current={
+                  (link.url === '/' ? path === '/' : path.startsWith(link.url))
+                    ? 'page'
+                    : undefined
+                }
               >
                 {link.title}
               </a>
