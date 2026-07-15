@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const updated = 'July 2026';
+---
+
+<BaseLayout title="Now" description="What Luke Morrow is up to these days.">
+  <section class="section container">
+    <p class="eyebrow">Now</p>
+    <h1>What I'm up to</h1>
+    <p class="ui-label updated">Last updated {updated}</p>
+
+    <div class="prose">
+      <p>
+        <strong>Working.</strong> Building a platform at Spotify that helps data scientists create
+        agentic workflows and spend less time on the tedious parts of their job.
+      </p>
+      <p>
+        <strong>Brewing.</strong> Making small batches under the
+        <a href="https://notomorrowbrewing.com" target="_blank" rel="noopener noreferrer"
+          >Not Tomorrow Brewing</a
+        > banner.
+      </p>
+      <p>
+        <strong>Building.</strong> Tinkering on
+        <a href="https://tour-de-friends.fly.dev/" target="_blank" rel="noopener noreferrer"
+          >Tour de Friends</a
+        > and other small apps in my spare time.
+      </p>
+      <p>
+        <strong>Outside.</strong> Backpacking, mountain biking, and kayaking whenever I can —
+        rides end up on <a
+          href="https://strava.app.link/R5BN3emEM4b"
+          target="_blank"
+          rel="noopener noreferrer">Strava</a
+        >, and the occasional trip gets written up in <a href="/adventures/">adventures</a>.
+      </p>
+    </div>
+
+    <p class="about-now">
+      This is a <a href="https://nownownow.com/about" target="_blank" rel="noopener noreferrer"
+        >now page</a
+      >: a snapshot of what I'm focused on, updated when things change.
+    </p>
+  </section>
+</BaseLayout>
+
+<style>
+  .updated {
+    color: var(--color-text-muted);
+    margin-bottom: 24px;
+  }
+
+  .prose {
+    max-width: 65ch;
+  }
+
+  .prose p {
+    font-size: 17px;
+  }
+
+  .prose strong {
+    font-weight: 600;
+    color: var(--color-accent);
+  }
+
+  .about-now {
+    margin-top: 40px;
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--color-text-muted);
+    max-width: 65ch;
+  }
+</style>
