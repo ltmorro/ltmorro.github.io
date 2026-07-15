@@ -23,6 +23,7 @@ const { Content } = await render(entry);
   heroCaption={entry.data.heroCaption}
   backLabel="Adventures"
   backHref="/adventures/"
+  ogImage={entry.data.heroImage ?? entry.data.image}
 >
   <Content />
 </EntryLayout>

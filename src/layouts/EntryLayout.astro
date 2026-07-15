@@ -11,13 +11,24 @@ interface Props {
   backLabel: string;
   backHref: string;
   archiveNote?: string;
+  ogImage?: string;
 }
 
-const { title, excerpt, date, heroImage, heroAlt, heroCaption, backLabel, backHref, archiveNote } =
-  Astro.props;
+const {
+  title,
+  excerpt,
+  date,
+  heroImage,
+  heroAlt,
+  heroCaption,
+  backLabel,
+  backHref,
+  archiveNote,
+  ogImage,
+} = Astro.props;
 ---
 
-<BaseLayout title={title} description={excerpt}>
+<BaseLayout title={title} description={excerpt} ogImage={ogImage ?? heroImage}>
   {
     heroImage && (
       <figure class="hero">

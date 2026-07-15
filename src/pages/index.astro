@@ -1,8 +1,21 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Luke Morrow',
+  url: 'https://lukemorrow.me',
+  image: 'https://lukemorrow.me/images/profile.png',
+  jobTitle: 'Backend Engineer',
+  worksFor: { '@type': 'Organization', name: 'Spotify' },
+  alumniOf: { '@type': 'CollegeOrUniversity', name: 'Clemson University' },
+  sameAs: ['https://www.linkedin.com/in/luke-morrow', 'https://github.com/ltmorro'],
+};
 ---
 
-<BaseLayout title="Luke Morrow" description="Learn a little about me.">
+<BaseLayout title="Luke Morrow" description="Learn a little about me." ogImage="/images/profile.png">
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(personSchema)} />
   <section class="section container hero">
     <p class="eyebrow">About Me</p>
     <h1>Luke Morrow</h1>
