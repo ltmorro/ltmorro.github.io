@@ -19,11 +19,28 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <p>
         Outside of work I spend time backpacking, mountain biking, kayaking, and camping. A few
         of those trips are written up in <a href="/adventures/">adventures</a>, with more to come.
+        I also brew beer and build small apps in my spare time.
       </p>
-      <p>
-        I also put time into two ongoing hobbies: homebrewing at <a href="https://notomorrowbrewing.com" target="_blank" rel="noopener noreferrer">Not Tomorrow Brewing</a>,
-        and building <a href="https://tour-de-friends.fly.dev/" target="_blank" rel="noopener noreferrer">Tour de Friends</a>, an app for tracking group rides with friends.
-      </p>
+    </div>
+  </section>
+
+  <hr class="divider container" />
+
+  <section class="section container elsewhere">
+    <p class="eyebrow">Elsewhere</p>
+    <div class="link-row">
+      <a class="btn" href="https://strava.app.link/R5BN3emEM4b" target="_blank" rel="noopener noreferrer"
+        >Strava <span aria-hidden="true">↗</span></a
+      >
+      <a class="btn" href="https://notomorrowbrewing.com" target="_blank" rel="noopener noreferrer"
+        >Not Tomorrow Brewing <span aria-hidden="true">↗</span></a
+      >
+      <a class="btn" href="https://tour-de-friends.fly.dev/" target="_blank" rel="noopener noreferrer"
+        >Tour de Friends <span aria-hidden="true">↗</span></a
+      >
+      <a class="btn" href="https://github.com/ltmorro" target="_blank" rel="noopener noreferrer"
+        >GitHub <span aria-hidden="true">↗</span></a
+      >
     </div>
   </section>
 </BaseLayout>
@@ -35,5 +52,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   .prose p {
     font-size: 17px;
+  }
+
+  .elsewhere {
+    padding-block-start: calc(var(--rhythm) / 2);
+  }
+
+  .link-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 16px;
   }
 </style>
