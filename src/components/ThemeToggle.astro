@@ -1,0 +1,50 @@
+<button id="theme-toggle" class="theme-toggle ui-label" aria-label="Toggle color theme" type="button">
+  <span data-icon>◐</span>
+</button>
+
+<style>
+  .theme-toggle {
+    background: none;
+    border: 1px solid var(--color-divider);
+    border-radius: 4px;
+    color: var(--color-text);
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+  }
+
+  .theme-toggle:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+</style>
+
+<script>
+  const STORAGE_KEY = 'theme';
+  const root = document.documentElement;
+  const button = document.getElementById('theme-toggle');
+
+  function currentTheme() {
+    return root.getAttribute('data-theme') || 'auto';
+  }
+
+  function apply(theme: string) {
+    if (theme === 'auto') {
+      root.removeAttribute('data-theme');
+      localStorage.removeItem(STORAGE_KEY);
+    } else {
+      root.setAttribute('data-theme', theme);
+      localStorage.setItem(STORAGE_KEY, theme);
+    }
+  }
+
+  button?.addEventListener('click', () => {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const effective = currentTheme() === 'auto' ? (prefersDark ? 'dark' : 'light') : currentTheme();
+    apply(effective === 'dark' ? 'light' : 'dark');
+  });
+</script>

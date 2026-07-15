@@ -1,0 +1,107 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  excerpt?: string;
+  date: Date;
+  heroImage?: string;
+  heroCaption?: string;
+  backLabel: string;
+  backHref: string;
+}
+
+const { title, excerpt, date, heroImage, heroCaption, backLabel, backHref } = Astro.props;
+---
+
+<BaseLayout title={title} description={excerpt}>
+  {
+    heroImage && (
+      <figure class="hero">
+        <img src={heroImage} alt="" />
+        {heroCaption && <figcaption class="container">{heroCaption}</figcaption>}
+      </figure>
+    )
+  }
+
+  <article class="section container prose">
+    <a class="ui-label back-link" href={backHref}>&larr; {backLabel}</a>
+    <p class="ui-label entry-date">
+      {date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+    </p>
+    <h1>{title}</h1>
+    {excerpt && <p class="entry-excerpt">{excerpt}</p>}
+    <hr class="divider" />
+    <div class="content">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .hero img {
+    width: 100%;
+    max-height: 60vh;
+    object-fit: cover;
+    border-radius: 0;
+    display: block;
+    margin: 0;
+  }
+
+  .hero figcaption {
+    margin-top: 12px;
+    padding-inline: 0;
+  }
+
+  .prose {
+    max-width: 720px;
+  }
+
+  .back-link {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-text-muted);
+    margin-bottom: 24px;
+  }
+
+  .back-link:hover {
+    color: var(--color-accent);
+  }
+
+  .entry-date {
+    color: var(--color-text-muted);
+    margin-bottom: 8px;
+  }
+
+  .entry-excerpt {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-size: 18px;
+    color: var(--color-text-muted);
+  }
+
+  .content :global(figure img) {
+    width: 100%;
+  }
+
+  .content :global(figure.half) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .content :global(figure.half a) {
+    flex: 1 1 calc(50% - 8px);
+    min-width: 200px;
+  }
+
+  .content :global(figure.half img) {
+    width: 100%;
+  }
+
+  @media (max-width: 640px) {
+    .content :global(figure.half) {
+      flex-direction: column;
+    }
+  }
+</style>

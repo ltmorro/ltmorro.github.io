@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Luke Morrow" description="Learn a little about me.">
+  <section class="section container hero">
+    <p class="eyebrow">About Me</p>
+    <h1>Luke Morrow</h1>
+
+    <div class="prose">
+      <p>
+        I'm currently working as a Data Scientist at a Marketing Agency in Austin, TX.
+      </p>
+      <p>
+        I graduated with a Master of Science in Computer Science from Clemson University in
+        2018. My area of focus is Informatics and Scientific Computation. I'm captivated by
+        data science, machine learning, artificial intelligence, and cyber security.
+        Interested in what I've done? Look <a href="/projects/">here!</a>
+      </p>
+      <p>
+        When I'm not programming, you can find me exploring the great outdoors. I relish any
+        activity that brings me outside including backpacking, mountain biking, kayaking, and
+        camping! Check out some of my adventures <a href="/adventures/">here!</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .prose {
+    max-width: 65ch;
+  }
+
+  .prose p {
+    font-size: 17px;
+  }
+</style>

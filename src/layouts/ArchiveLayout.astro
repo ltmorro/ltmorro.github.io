@@ -1,0 +1,110 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Item {
+  slug: string;
+  title: string;
+  excerpt?: string;
+  image?: string;
+  date: Date;
+}
+
+interface Props {
+  title: string;
+  description?: string;
+  basePath: string;
+  items: Item[];
+}
+
+const { title, description, basePath, items } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="section container">
+    <p class="eyebrow">{title}</p>
+    <h1>{title}</h1>
+    {description && <p class="lede">{description}</p>}
+  </section>
+
+  <hr class="divider container" />
+
+  <section class="section container">
+    <div class="grid">
+      {
+        items.map((item, index) => (
+          <a class="card" data-wide={index % 3 === 0} href={`${basePath}/${item.slug}/`}>
+            {item.image && <img src={item.image} alt="" loading="lazy" />}
+            <div class="card__body">
+              <p class="ui-label card__date">
+                {item.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short' })}
+              </p>
+              <h3>{item.title}</h3>
+              {item.excerpt && <p class="card__excerpt">{item.excerpt}</p>}
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .lede {
+    max-width: 55ch;
+    color: var(--color-text-muted);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px 24px;
+  }
+
+  .card {
+    grid-column: span 4;
+    text-decoration: none;
+    color: var(--color-text);
+    display: block;
+  }
+
+  .card[data-wide='true'] {
+    grid-column: span 7;
+  }
+
+  .card + .card[data-wide='true'] {
+    grid-column: span 5;
+  }
+
+  .card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+  }
+
+  .card__body {
+    padding-top: 16px;
+  }
+
+  .card__date {
+    color: var(--color-text-muted);
+    margin-bottom: 8px;
+  }
+
+  .card h3 {
+    margin: 0 0 8px;
+  }
+
+  .card__excerpt {
+    color: var(--color-text-muted);
+    font-size: 14px;
+    margin: 0;
+  }
+
+  @media (max-width: 800px) {
+    .card,
+    .card[data-wide='true'] {
+      grid-column: span 12;
+    }
+  }
+</style>

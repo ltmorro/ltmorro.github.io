@@ -1,0 +1,18 @@
+---
+import { getCollection } from 'astro:content';
+import ArchiveLayout from '../../layouts/ArchiveLayout.astro';
+
+const entries = (await getCollection('posts')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+const items = entries.map((entry) => ({
+  slug: entry.id,
+  title: entry.data.title,
+  excerpt: entry.data.excerpt,
+  image: entry.data.image,
+  date: entry.data.date,
+}));
+---
+
+<ArchiveLayout title="Blog" basePath="/blog" items={items} />
