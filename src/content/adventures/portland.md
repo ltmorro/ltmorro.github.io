@@ -34,7 +34,7 @@ heroCaption: "Columbia River Gorge"
 </figure>
 
 <figure>
-<a href="/images/portland/falls.gif"><img src="/images/portland/falls.gif"></a>
+<a href="/images/portland/falls.webp"><img src="/images/portland/falls.webp" loading="lazy"></a>
 </figure>
 ## Cannon Beach
 <figure>

@@ -15,4 +15,4 @@ The map is implemented in Python and utilizes the library Tkinter for graphical 
 For the pathing, I created a graph of the building's rooms and used a variant of Dijkstra's algorithm to find the shortest path between two rooms.
 
 ## Video Showcase
-<video src="/images/mcadams/project_video.mp4" controls></video>
+<video src="/images/mcadams/project_video.mp4" controls preload="metadata"></video>
