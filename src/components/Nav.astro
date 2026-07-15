@@ -21,7 +21,11 @@ const path = Astro.url.pathname;
               <a
                 href={link.url}
                 class="ui-label"
-                aria-current={path === link.url ? 'page' : undefined}
+                aria-current={
+                  (link.url === '/' ? path === '/' : path.startsWith(link.url))
+                    ? 'page'
+                    : undefined
+                }
               >
                 {link.title}
               </a>
